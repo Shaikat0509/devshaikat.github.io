@@ -18,26 +18,28 @@ jQuery(document).ready(function($) {
     $('[data-toggle="tooltip"]').tooltip()
   })
 
-  var $container = $('.isotope-items'),
-    $filterLinks = $('.filter-nav li a');
+  setTimeout(function(){
+    var $container = $('.isotope-items'),
+      $filterLinks = $('.filter-nav li a');
 
-  $container.isotope({
-    itemSelector: '.item',
-    filter: '.item'
-  });
-  $filterLinks.click(function(e){
-    e.preventDefault();
-    var $this = $(this);
-    if ( $this.hasClass('selected') ) {
-      return;
-    }
-    $filterLinks.filter('.selected').removeClass('selected');
-    $this.addClass('selected');
-    selector = $this.data('filter');
     $container.isotope({
-      filter: selector
+      itemSelector: '.item',
+      filter: '.item'
     });
-  });
+    $filterLinks.click(function(e){
+      e.preventDefault();
+      var $this = $(this);
+      if ( $this.hasClass('selected') ) {
+        return;
+      }
+      $filterLinks.filter('.selected').removeClass('selected');
+      $this.addClass('selected');
+      selector = $this.data('filter');
+      $container.isotope({
+        filter: selector
+      });
+    });
+  }, 3000);
 
   if($(window).width() < 768) {
     var selected_item = $('.filter-nav .selected .item-cat').text();
