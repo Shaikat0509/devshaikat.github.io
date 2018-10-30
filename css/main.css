@@ -1,0 +1,460 @@
+
+/* =============== Start of fonts css =============== */
+
+@import url('https://fonts.googleapis.com/css?family=Galada|Montserrat:400,500,600,700,900');
+/*
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Galada', cursive;
+*/
+
+/* =============== End of fonts css =============== */
+
+/* =============== Start of global css =============== */
+
+body {
+  color: #2c3e50;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  float: left;
+  position: relative;
+  overflow: hidden;
+}
+.area {
+  width: 100%;
+  float: left;
+}
+a,button,input,textarea {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  outline: none !important;
+  text-decoration: none !important;
+}
+p {
+  margin-bottom: 30px;
+}
+
+/* =============== End of global css =============== */
+
+/* =============== Start of style css =============== */
+
+.banner {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  top: 0;
+  transition: all 1s;
+}
+.banner-left {
+  width: 66%;
+  float: left;
+  background-image: url('../img/banner.jpg');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  padding: 100px;
+  position: relative;
+  z-index: 1;
+}
+.banner-left::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.greetings {
+  color: #ffffff;
+  font-family: 'Galada', cursive;
+  font-size: 32px;
+  line-height: 42px;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px rgba(255,255,255,0.8);
+  margin: 0;
+}
+.name {
+  color: #ffffff;
+  font-size: 66px;
+  line-height: 76px;
+  font-weight: 900;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(255,255,255,0.8);
+  margin: 0;
+}
+.job {
+  color: #ffffff;
+  font-size: 26px;
+  line-height: 36px;
+  letter-spacing: 5px;
+  text-shadow: 0 0 10px rgba(255,255,255,1);
+  margin: 0;
+}
+.banner-right {
+	width: 34%;
+	background: #0d0c0a;
+  float: left;
+  display: flex;
+  align-items: center;
+	padding: 50px;
+}
+.quick-info-wrap img {
+  max-width: 100px;
+}
+.quick-info-box {
+  background: #ffffff;
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+.quick-info-box-left,
+.quick-info-box-right {
+  display: flex;
+  align-items: center;
+}
+.quick-info-box-left {
+  width: 22%;
+}
+.quick-info-box-left h3 {
+  color: #0d0c0a;
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: 400;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+}
+.quick-info-box-left h3 span {
+  font-size: 30px;
+  font-weight: 700;
+  display: block;
+}
+.quick-info-box-right {
+  margin-left: 15px;
+  padding-left: 15px;
+  border-left: 1px solid #dbdbdb;
+}
+.quick-info-box-right ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.quick-info-box-right ul li {
+  color: #0d0c0a;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
+}
+.quick-links {
+  margin-top: 30px;
+}
+.btn-fill {
+  color: #16a085;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  text-align: center;
+  padding: 13px 40px;
+  background: transparent;
+  border: 2px solid #16a085;
+  border-radius: 0;
+  margin: 0 11px 15px 0;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  width: 185px;
+}
+.btn-fill::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 490%;
+  width: 140%;
+  background: #16a085;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+  transform: translateX(-98%) translateY(-25%) rotate(45deg);
+  z-index: -1;
+}
+.btn-fill:hover,
+.btn-fill:focus {
+  color: #ffffff;
+  background: transparent;
+}
+.btn-fill:hover::after,
+.btn-fill:active::after {
+  -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+  transform: translateX(-9%) translateY(-25%) rotate(45deg);
+}
+.about-me {
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  background: #ffffff;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  transition: all 1s;
+}
+.showing-section .banner {
+  top: -200px;
+  opacity: 0;
+}
+.about-me.show {
+  top: 0;
+}
+/*  */
+.nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px 30px 13px;
+  background: #16a085;
+}
+.nav ul li {
+  width: 50%;
+}
+.nav ul li:last-child {
+  text-align: right;
+}
+.nav ul li a {
+	display: inline-block;
+}
+.nav ul li a i {
+  color: #ffffff;
+	font-size: 28px;
+	line-height: 28px;
+  text-shadow: 3px 3px 0px rgba(0,0,0,0.2);
+}
+.tooltip {
+  padding: 0 10px !important;
+}
+.tooltip-inner {
+	padding: 7px 15px;
+	color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+	font-size: 12px;
+	line-height: 18px;
+	text-align: center;
+	background-color: #2c3e50;
+	border-radius: 4px;
+	width: auto;
+	max-width: 100%;
+	font-weight: 500;
+}
+.tooltip.left .tooltip-arrow {
+	top: 50%;
+	right: 5px;
+	margin-top: -5px;
+	border-width: 5px 0 5px 5px;
+	border-left-color: #2c3e50;
+}
+.tooltip.right .tooltip-arrow {
+	top: 50%;
+	left: 5px;
+	margin-top: -5px;
+	border-width: 5px 5px 5px 0;
+	border-right-color: #2c3e50;
+}
+.about {
+  margin-top: 100px;
+}
+.section-title {
+  font-size: 42px;
+  line-height: 52px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  padding-bottom: 15px;
+  margin: 0 0 40px;
+  position: relative;
+}
+.section-title::after {
+  content: "";
+  height: 7px;
+  width: 100px;
+  background: #16a085;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.borderd-box {
+  border: 3px solid #dbdbdb;
+  padding: 30px;
+}
+.skills {
+  padding-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.skill-box {
+  text-align: center;
+}
+.skill-box i {
+  color: #16a085;
+  font-size: 50px;
+  line-height: 50px;
+  margin: 0 0 10px;
+}
+.skill-box h3 {
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  margin: 0 0 10px;
+}
+.bg-gray {
+  background: #f1f1f1;
+  padding: 50px 0;
+}
+.experience {
+  margin-top: 100px;
+}
+.section-sub-title {
+	font-size: 32px;
+	line-height: 40px;
+  font-weight: 600;
+	letter-spacing: 2px;
+	margin: 0 0 30px;
+}
+.experience-title {
+  font-size: 22px;
+  line-height: 28px;
+  letter-spacing: 1px;
+  margin: 0;
+}
+.experience-company {
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 1px;
+  margin: 0 0 10px;
+}
+
+/*  */
+.portfolio-section {
+  width: 100%;
+  height: 100vh;
+  margin: 0 0 50px;
+  overflow: auto;
+  background: #f7f7f7;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  transition: all 1s;
+}
+.portfolio-section.show {
+  top: 0;
+}
+.portfolio-section .nav {
+  margin-bottom: 20px;
+}
+.portfolios {
+  margin-bottom: 100px;
+}
+.portfolio-box {
+  background: #2c3e50;
+	position: relative;
+  box-shadow: 0 0 10px 0 rgba(22,107,133,.2);
+  overflow: hidden;
+  transition: all 0.3s;
+  margin-top: 30px;
+}
+.portfolio-img {
+	max-width: 100%;
+  position: relative;
+  top: 0;
+  transition: all 0.5s;
+}
+.portfolio-info {
+  overflow: hidden;
+  padding: 0 30px;
+  background: #16a085;
+  width: 100%;
+  height: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: all 0.5s;
+}
+.portfolio-box:hover .portfolio-info {
+  padding: 10px 30px;
+  height: 80px;
+}
+.portfolio-box:hover .portfolio-img {
+  top: -80px;
+  opacity: 0.7;
+}
+.portfolio-info-left, .portfolio-info-link {
+  display: table-cell;
+  vertical-align: top;
+}
+.portfolio-info-left {
+  width: 100%;
+  overflow: hidden;
+}
+.portfolio-title {
+  color: #ffffff;
+  margin: 0;
+}
+.portfolio-info p {
+  color: #ffffff;
+  margin: 0;
+}
+.portfolio-box .btn-fill {
+	width: auto;
+}
+.portfolio-info-link {
+  padding: 0 0 0 30px;
+  vertical-align: middle;
+}
+.portfolio-link {
+	color: #ffffff;
+	font-size: 30px;
+	line-height: 30px;
+	display: inline-block;
+  margin-top: 2px;
+}
+.portfolio-link:hover {
+	color: #2c3e50;
+}
+
+
+
+
+
+
+
+/*
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Galada', cursive;
+*/
+
+/* =============== End of style css =============== */
+
+
+
+
+
+
+
+
+
+/*  */
